@@ -15,8 +15,8 @@
     <img src="https://jirehlov.com/123_files/code_top.jpg" style="width: 100%;">
     <p style="font-size: 12px;margin: 0 80px 50px 80px;">Everyone is responsible for epidemic prevention on campus</p>
     <div style="font-size: 32px;" class="name" wfd-id="10">false&nbsp;&nbsp;&nbsp;<span style="color:#3a4c40" wfd-id="11">校园通行码&nbsp;&nbsp;<small style="font-size: 12px;">Campus Pass Code</small></span></div>
-    <div style="font-size: 32px;margin:50px auto 20px auto;" class="XY" wfd-id="9">false</div>
-    <div style="font-size: 32px;margin:20px auto 70px auto;" class="ID" wfd-id="8">false</div>
+    <div style="font-size: 32px;margin:50px auto 20px auto;" class="XY" wfd-id="9">王家斌</div>
+    <div style="font-size: 32px;margin:20px auto 70px auto;" class="ID" wfd-id="8">1234567890123</div>
     <div style="font-size: 14px;color: #a2a2a2;" wfd-id="7">生成时间 Generation time:</div>
     <div style="font-size: 14px;" class="time_1" wfd-id="6">2020-09-01 00:00:00</div>
     <div style="font-size: 14px;color: #a2a2a2;" wfd-id="5">到期时间 Expire time:</div>
@@ -30,37 +30,4 @@
     </div>
     <img src="https://jirehlov.com/123_files/code_bottom.jpg" style="width: 100%;">
 </div>
-<script>
-    function formatLen(d) {
-        return d<10?"0"+d:d;
-    }
-    function getQueryVariable(variable)
-        {
-            var query = decodeURI(window.location.search.substring(1));
-            var vars = query.split("&");
-            for (var i=0;i<vars.length;i++) {
-                var pair = vars[i].split("=");
-                if(pair[0] === variable){return pair[1];}
-            }
-            return(false);
-        }
-        var name = getQueryVariable('a');
-        var ID = getQueryVariable('b');
-	    var XY = getQueryVariable('c');
-
-
-    $(function () {
-        var mydate = new Date();
-        var yesterday=new Date(mydate.getTime()-24*60*60*1000);
-        var last_str = yesterday.getFullYear()+"-"+formatLen(yesterday.getMonth()+1)+"-"+formatLen(yesterday.getDate())+" 00:00:00";
-        var now_str = mydate.getFullYear()+"-"+formatLen(mydate.getMonth()+1)+"-"+formatLen(mydate.getDate()+0)+" 23:59:59";
-        $(".time_1").text(last_str);
-        $(".time_2").text(now_str);
-        $(".name").html(name+"&nbsp;&nbsp;&nbsp;<span style='color:#3a4c40'>校园通行码&nbsp;&nbsp;<small style='font-size: 12px;'>Campus Pass Code</small></span>");
-        $(".ID").text(ID);
-	$(".XY").text(XY);
-    })
-</script>
-
-
 <div class="kpm_LTR notranslate" translate="no" id="kpm-root" wfd-id="0"></div></body></html>
