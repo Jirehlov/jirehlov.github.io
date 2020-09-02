@@ -8,7 +8,21 @@
         }
     </style>
 <script src="https://jirehlov.com/123_files/jquery.min.js.download" type="text/javascript"></script>
-<script src="https://jirehlov.com/123_files/time.js.download"></script></head>
+<script type="text/javascript">
+    window.onload=function(){
+     setInterval(function(){
+      var date=new Date();
+      var year=date.getFullYear(); 
+      var mon=date.getMonth()+1; 
+      var da=date.getDate(); 
+      var h=date.getHours(); 
+      var m=date.getMinutes(); 
+      var s=date.getSeconds(); 
+      var d=document.getElementById('Date'); 
+      d.innerHTML=year+'-'+mon+'-'+da+' '+h+':'+m+':'+s;
+     },1000) 
+    }
+</script></head>
 
 <body style="margin: 0;" data-gr-c-s-loaded="true">
 <img src="https://jirehlov.com/123_files/top_bar.jpg" style="width: 100%;position: fixed;top:0;left:0;z-index: 100;">
